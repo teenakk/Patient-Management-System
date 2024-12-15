@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Patient</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light background color */
+            color: #333; /* Dark text color */
+        }
+        .navbar {
+            background-color: #001f3f; /* Dark blue background for navbar */
+        }
+        .navbar-brand, .nav-link {
+            color: #ffffff !important; /* White text for navbar */
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ffd700; /* Gold color on hover */
+        }
+        .container {
+            margin-top: 50px;
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem; /* Larger heading size */
+            color: #001f3f; /* Dark blue for heading */
+        }
+        .form-control {
+            border-radius: 5px; /* Rounded corners for inputs */
+        }
+        .btn-fetch {
+            background-color: #001f3f; /* Dark blue button color */
+            color: white;
+            border: none;
+            border-radius: 5px; /* Rounded corners */
+            padding: 10px 20px; /* Increased padding */
+            font-size: 1.1rem; /* Larger button text */
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+        }
+        .btn-fetch:hover {
+            color: grey; /* Text color on hover */
+            background-color: #004080; /* Lighter blue on hover */
+            transform: scale(1.05); /* Slightly enlarge button on hover */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Patient Management</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto"> <!-- Centered navigation -->
+                <li class="nav-item"><a class="nav-link" href="add_patient.html">Add Patient</a></li>
+                <li class="nav-item"><a class="nav-link" href="patientDetails.html">Fetch Patient Details</a></li>
+                <li class="nav-item"><a class="nav-link" href="fetchPatient.html">Fetch All Patients</a></li>
+                <li class="nav-item"><a class="nav-link" href="get_avg_age.html">Get Average Age</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Add Patient</h2>
+        <form action="/PLSQLProject2/addPatient" method="post" class="needs-validation" novalidate>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+                <div class="invalid-feedback">Please enter the patient's name.</div>
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" class="form-control" id="age" name="age" required>
+                <div class="invalid-feedback">Please enter the patient's age.</div>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select class="form-control" id="gender" name="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+                <div class="invalid-feedback">Please select the patient's gender.</div>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" class="form-control" id="address" name="address" required>
+                <div class="invalid-feedback">Please enter the patient's address.</div>
+            </div>
+            <div class="form-group">
+                <label for="contact_number">Contact Number</label>
+                <input type="tel" class="form-control" id="contact_number" name="contact_number" required>
+                <div class="invalid-feedback">Please enter the patient's contact number.</div>
+            </div>
+            <button type="submit" class="btn btn-fetch">Add Patient</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Management</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .navbar {
+            background-color: #001f3f; /* Dark blue background color */
+        }
+        .navbar-brand, .nav-link {
+            color: #ffffff !important; /* White color for text */
+        }
+        .navbar-brand:hover, .nav-link:hover {
+            color: #ffd700 !important; /* Gold on hover */
+        }
+        .container {
+            margin-top: 20px;
+            background-color: #001f3f;
+            padding: 20px;
+            border-radius: 10px;
+            color: #fff;
+        }
+        .header-image {
+            width: 100%; /* Full width */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 20px;
+            border-radius: 10px; /* Rounded corners for the image */
+        }
+        .navbar-nav {
+            flex-direction: row; /* Align items in a row */
+            justify-content: center; /* Center the nav links */
+            width: 100%; /* Full width */
+        }lkm
+        .nav-item {
+            margin: 0 15px; /* Spacing between nav items */
+        }
+        .btn-fetch {
+            background-color: #007bff; /* Primary button color */
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .btn-fetch:hover {
+            background-color: #0056b3; /* Darker on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Patient Management</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="add_patient.html">Add Patient</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="patientDetails.html">Fetch Patient Details</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="fetchPatient.html">Fetch All Patients</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="get_avg_age.html">Get Average Age</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="container text-center"> <!-- Centered text -->
+        <!-- Image placed at the top of the page -->
+        <img src="hospital.jpeg" alt="Hospital Image" class="header-image">
+        
+        <h2>Welcome to Patient Management</h2>
+        <p>Use the navigation menu to manage patient details.</p>
+    </div>
+
+    <!-- Additional content can be added here -->
+
+</body>
+</html>
